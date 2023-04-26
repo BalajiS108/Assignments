@@ -14,10 +14,15 @@ Ex - "Hello Mam, how are you. Madam, do you know racecar?
  */
 
 const palindromeString = (str) => {
-  str = str.toLowerCase().replace(/[^a-zA-Z ]/g, '');
-  let str1 = str.trim().split(' ');
-  l = str1.length;
-  let arr = [];
+  const str1 = str
+    .toLowerCase()
+    .replace(/[^a-zA-Z ]/g, '')
+    .trim()
+    .split(' ');
+  //   let str1 = str.trim().split(' ');
+  console.log(str1);
+  const l = str1.length;
+  const arr = [];
   //   console.log(str1);
   for (let i = 0; i < l; i++) {
     let count = 0;
@@ -43,3 +48,13 @@ const palindromeString = (str) => {
   return temp;
 };
 console.log(palindromeString('Hello Mam, how are you. Madam, do you know racecar?'));
+
+const obj = { a: 1, b: 2 };
+console.log(obj);
+const keys = Object.keys(obj);
+console.log(keys);
+for (let i = 0; i < keys.length; i++) {
+  if (obj.hasOwnProperty('a')) {
+    console.log('Hello');
+  }
+}
