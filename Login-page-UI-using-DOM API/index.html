@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="sign-in-conatiner">
+      <form id="main-container"></form>
+    </div>
+  </body>
+</html>
+<script>
+  const mainContainer = document.getElementById("main-container");
+  const signInTitle = document.createElement("div");
+  const inputEmailDiv = document.createElement("div");
+  const inputEmail = document.createElement("input");
+  const inputPasswordDiv = document.createElement("div");
+  const inputPassword = document.createElement("input");
+  const signInBtn = document.createElement("button");
+  const br = document.createElement("br");
+  const belowDiv = document.createElement("div");
+  const checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  const rememberMe = document.createElement("span");
+  const needHelp = document.createElement("span");
+
+  signInTitle.className = "signInTitle";
+  inputEmailDiv.className = "email-div";
+  inputEmail.className = "email";
+  inputPasswordDiv.className = "password-div";
+  inputPassword.className = "password";
+  signInBtn.className = "btn";
+  belowDiv.className = "below-div";
+  checkbox.className = "checkbox";
+  rememberMe.className = "rememberMe";
+  needHelp.className = "needHelp";
+
+  signInBtn.textContent = "Sign In";
+  signInTitle.textContent = "Sign In";
+  rememberMe.textContent = "Remember Me";
+  needHelp.textContent = "Need Help";
+
+  //setting placeholders
+
+  inputEmail.setAttribute("placeholder", "Email or Phone No");
+  inputPassword.setAttribute("placeholder", "Password");
+
+  //styling
+  signInTitle.style.marginBottom = "20px";
+  signInBtn.style.backgroundColor = "red";
+
+  //   signInBtn.style.width = 250;
+
+  //Appending nodes to main container
+  mainContainer.appendChild(signInTitle);
+  mainContainer.appendChild(inputEmailDiv);
+  inputEmailDiv.appendChild(inputEmail);
+  mainContainer.appendChild(inputPasswordDiv);
+  inputPasswordDiv.appendChild(inputPassword);
+  mainContainer.appendChild(signInBtn);
+  mainContainer.appendChild(belowDiv);
+  //   belowDiv.appendChild(needHelp);
+  //   needHelp.prepend(rememberMe);
+  //   rememberMe.prepend(checkbox);
+  belowDiv.appendChild(checkbox);
+  belowDiv.appendChild(rememberMe);
+  belowDiv.appendChild(needHelp);
+</script>
+<style>
+  body {
+    font-family: sans-serif;
+    min-height: 100%;
+    min-width: 100%;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("./Assets/bg-img.jpg");
+  }
+  #sign-in-conatiner {
+    background-color: black;
+    /* filter: brightness(90%); */
+    opacity: 0.8;
+    height: 400px;
+    width: 450px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+  }
+  .signInTitle {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+  }
+  .email {
+    padding: 15px;
+    width: 327px;
+    margin-bottom: 20px;
+    color: #fff;
+    background: #333;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    border: none;
+  }
+  .password {
+    padding: 15px;
+    width: 327px;
+    color: #fff;
+    background: #333;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    border: none;
+  }
+  .btn {
+    width: 327px;
+    padding: 15px;
+    margin-bottom: 5px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+  .belowDiv {
+    background-color: #e50914;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around;  */
+  }
+
+  .rememberMe {
+    color: white;
+    margin-right: 165px;
+    margin-left: 5px;
+    font-size: 12px;
+  }
+  .needHelp {
+    color: white;
+    font-size: 12px;
+  }
+</style>
