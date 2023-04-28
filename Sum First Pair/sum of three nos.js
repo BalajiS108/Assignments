@@ -14,7 +14,7 @@ function sumPair(arr, X) {
 
   for (let i = 0; i <= arr.length - 1; i++) {
     const obj = {};
-    for (let j = i; j <= arr.length - 1; j++) {
+    for (let j = i + 1; j <= arr.length - 1; j++) {
       if (arr[i] + arr[j] <= X) {
         const firstTwoNoSum = arr[i] + arr[j];
         const remValue = X - firstTwoNoSum;

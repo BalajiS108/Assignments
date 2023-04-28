@@ -13,15 +13,16 @@ function sumPair(arr, X) {
   const obj = {};
   const arr1 = [];
   for (let i = 0; i <= arr.length - 1; i++) {
-    const pairNo = X - arr[i];
+    const pairNo = X - arr[i]; //5-1=4,5-2=3,5-3=2
     // console.log(pairNo);
     if (obj.hasOwnProperty(pairNo)) {
       arr1.push([arr[i], pairNo]);
     }
     obj[arr[i]] = i;
   }
+  // console.log(obj);
   console.log(arr1);
   console.log(arr1[0]);
 }
 
-sumPair([1, 2, 3, 4, 5, 6], 5);
+sumPair([0, 2, 3, 4, 5, 6], 5);
