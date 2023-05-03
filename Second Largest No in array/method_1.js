@@ -18,11 +18,10 @@ const findSecondLargestNo = (arr) => {
   let temp = 0;
   for (let i = 1; i < arr.length; i++) {
     if (max < arr[i]) {
-      temp = max;
+      s_max = max;
       max = arr[i];
-      s_max = temp;
     } else {
-      if (arr[i] > s_max) {
+      if (arr[i] > s_max && arr[i] < max) {
         s_max = arr[i];
       }
     }
