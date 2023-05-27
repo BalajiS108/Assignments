@@ -43,20 +43,20 @@ const intersectionOfTwoArraysV2 = (arr1, arr2) => {
   } else {
     l1 = l1 + l2 - l1;
   }
-  console.log(l1, l2);
+  // console.log(l1, l2);
 
   for (let i = 0, j = 0; i < l1, j < l2; i++, j++) {
     if (!obj.hasOwnProperty(arr1[i]) && !obj.hasOwnProperty(undefined)) {
-      obj[arr1[i]] = i;
+      obj[arr1[i]] = arr1[i];
     }
 
-    console.log(obj);
+    // console.log(obj);
 
     if (!obj.hasOwnProperty(arr2[j]) && !obj.hasOwnProperty(undefined)) {
-      obj[arr2[j]] = j;
+      obj[arr2[j]] = arr2[j];
     }
   }
 
-  return Object.keys(obj);
+  return Object.values(obj);
 };
 console.log(intersectionOfTwoArraysV2([1, 2, 3, 4], [4, 5, 6, 7]));

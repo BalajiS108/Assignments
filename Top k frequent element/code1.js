@@ -26,9 +26,6 @@ var topKFrequent = function (nums, k) {
     let temp1 = 0;
     for (let j = i + 1; j < num2.length; j++) {
       if (num2[i].freq < num2[j].freq) {
-        temp = num2[i].freq;
-        num2[i].freq = num2[j].freq;
-        num2[j].freq = temp;
         temp1 = num2[i].value;
         num2[i].value = num2[j].value;
         num2[j].value = temp1;

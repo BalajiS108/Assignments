@@ -7,9 +7,9 @@ var reverse = function (x) {
     x1 = x;
   }
   while (x1 > 0) {
-    let remainder = x1 % 10;
-    reverseNo = reverseNo * 10 + remainder;
-    x1 = Math.floor(x1 / 10);
+    let remainder = x1 % 10; //x1=1234  remainder=4, rem=3, rem=2,rem=1
+    reverseNo = reverseNo * 10 + remainder; //0+4=4 ,40+3=43,430+2=432,4320+1=4321
+    x1 = Math.floor(x1 / 10); //123,12,1
   }
   if (x < 0) {
     reverseNo = reverseNo * -1;
@@ -20,4 +20,4 @@ var reverse = function (x) {
   }
 };
 
-console.log(reverse(1234));
+console.log(reverse(123));
